@@ -1,0 +1,13 @@
+<% provide(:title, 'All users') %>
+<h1>All users</h1>
+
+<%= will_paginate(@users, class: "pagination justify-content-center") %>
+
+<%= render 'users/search' %>
+
+<ul class="users">
+    <%= render @users %>
+</ul>
+
+<%= will_paginate(@users, class: "pagination justify-content-center") %>
+
