@@ -19,18 +19,51 @@
  
   </div>
 <% else %>
-<div class="center jumbotron">
-  <h1>Welcome to D2D </h1>
+<div class="jumbotron jumbotron-fluid jumbotron-extend">
+  <div class="container">
+    <h1 class="huwari">Welcome to D2D </h1>
 
-  <h2>
-    This is the home page for the
-    <a href="https://railstutorial.jp/">Ruby on Rails Tutorial</a>
-    sample application.
-  </h2>
+    <h2>
+    このアプリはあなたの積み上げた時間を記録するアプリです。
+    </h2>
+  </div>
 
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
- </div>
-
-<%= link_to image_tag("kitten.jpg", alt: "Rails logo"),
-            'http://rubyonrails.org/' %>
+  <%= link_to "始める", signup_path, class: "btn btn-lg btn-primary" %>
+</div>
+<section class="service2">
+  <h2>FLOWERだから続けられる<br>お花のある暮らし</h2>
+  <div class="service2__container">
+    <div class="service2__container__item1">
+      <h3>お世話が簡単</h3>
+      <p>お花の栄養剤をセットでお届け</p>
+      <p>こまめな水換えは不要です</p>
+    </div>
+    <div class="service2__container__item2">
+      <h3>アプリがお知らせ</h3>
+      <p>お花のお届けはアプリがお知らせ</p>
+      <p>受け取り忘れの心配はありません。</p>
+    </div>
+    <div class="service2__container__item3">
+      <h3>安心の保証つき</h3>
+      <p>万が一枯れたお花が届いても、</p>
+      <p>新しいものを無料で再送します。</p>
+    </div>
+  </div>
+</section>
 <% end %>
+
+<script>
+    $(function(){
+    $(window).scroll(function (){
+        $('.huwari').each(function(){
+            var targetElement = $(this).offset().top;
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            if (scroll > targetElement - windowHeight + 0){
+                $(this).css('opacity','1');
+                $(this).css('transform','translateY(0)');
+            }
+        });
+    });
+});
+</script>
