@@ -40,6 +40,13 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
+    if params[:image]
+      #データベースに保存するファイル名はユーザーのid.jpgとする
+      @user.image_name = "#{@user.id}.jpg"
+      image = params[:image]
+      File.binwrite("public/user_images/#{@user.image_name}",image.read)
+    end
+
     if @user.update_attributes(user_params)
       flash[:success] = "Profile updated"
       redirect_to @user
@@ -73,7 +80,7 @@ class UsersController < ApplicationController
 
     def user_params
       params.require(:user).permit(:name, :email, :password,
-                                  :password_confirmation)
+                                  :password_confirmation,:image)
     end
 
 

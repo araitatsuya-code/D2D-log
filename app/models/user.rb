@@ -18,7 +18,8 @@ class User < ApplicationRecord
                     uniqueness: { case_sensitive: false } 
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
-
+  mount_uploader :image, PictureUploader
+  
   # 渡された文字列のハッシュ値を返す
   def self.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
