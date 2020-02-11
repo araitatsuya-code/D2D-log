@@ -13,5 +13,6 @@
     <% end %>
   </span>
     <!--like拡張機能-->
+<% if !current_user?(micropost.user) %>
   <%= render partial: 'likes/like', locals: { micropost: micropost, likes: @likes } %>
-</li>
+<% end %>
