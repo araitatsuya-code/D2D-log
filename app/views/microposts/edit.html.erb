@@ -1,21 +1,22 @@
-<% provide(:title, '編集') %>
+<% provide(:title, 'メモ編集') %>
 <div class="container micropost-edit-container">
   <div class="edit-titles">
-    <%= image_tag 'edit_02.png', class: 'edit-img' %>
     <h1 class="title edit-micropost-title">メモ編集</h1>
   </div>
-  <%= form_with(model: @micropost,local:true) do |f| %>
-  <%= render 'shared/error_messages', object: f.object %>
-  <div class="form-group">
-    <%= f.number_field :time, class: 'form-control', placeholder: "時間（分）を入力してください" %>
-  </div>
-  <div class="field">
-    <%= f.text_area :content,placeholder: @micropost.content %>
-  </div>
-  <span class="picture">
-    <%= f.file_field :picture, class: 'form-control-file', placeholder: @micropost.picture %>
-  </span>
-<% end %>
+  <%= form_with(model: @micropost, url: micropost_path, local: true) do |form| %>
+    <%= render 'shared/error_messages', object: form.object %>
+    <div class="form-group">
+      <%= form.label :time, '時間' %>
+      <%= form.number_field :time, class: 'form-control', placeholder: @micropost.time %>
+    </div>
+    <div class="form-group">
+      <%= form.label :content, 'メモ' %>
+      <%= form.text_area :content, class: 'form-control', placeholder: @micropost.content %>
+    </div>
+    <div class="form-group">
+      <%= form.label :picture, '画像' %>
+      <%= form.file_field :picture, class: 'form-control-file', placeholder: @micropost.picture %>
+    </div>
     <div class="row">
       <div class="col">
         <div class="form-group">
@@ -24,7 +25,7 @@
       </div>
       <div class="col">
         <div class="form-group">
-          <%= f.submit "編集", class: 'btn btn-info btn-lg btn-edit-user' %>
+          <%= form.submit "編集", class: 'btn btn-info btn-lg btn-edit-user' %>
         </div>
       </div>
     </div>

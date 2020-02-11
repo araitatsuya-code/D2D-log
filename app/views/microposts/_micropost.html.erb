@@ -9,7 +9,7 @@
     <% if current_user?(micropost.user) %>
       <%= link_to "削除", micropost, method: :delete,
                                        data: { confirm: "You sure?" } %>
-      <%= link_to "編集", micropost, method: :patch %>
+      <%= link_to "編集", edit_micropost_path(micropost.id) %>
     <% end %>
   </span>
     <!--like拡張機能-->

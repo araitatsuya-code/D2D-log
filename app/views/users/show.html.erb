@@ -11,10 +11,10 @@
     <section class="stats">
       <%= render 'shared/stats' %>
     </section>
+
   </aside>
   <div class="col-md-6">
-  <%= line_chart @data.group_by_week(:created_at).sum(:time) %>
-  <%= line_chart @data.group_by_month(:created_at).sum(:time) %>
+  <%= render 'layouts/figure' %> 
   </div>
   <div class="col-md-12">
     <%= render 'follow_form' if logged_in? %>

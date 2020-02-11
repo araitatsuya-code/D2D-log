@@ -1,6 +1,6 @@
 <header>
   <div class="container">
-    <nav  style="background-color:#e3f2fd;"class="navbar navbar-light navbar-expand-sm fixed-top navbar-extend ">
+    <nav  style="background-color:#282828;"class="navbar navbar-light navbar-expand-sm fixed-top navbar-extend ">
         <%= link_to "D2D learning", root_path, id: "logo", class: "navbar-brand" %>
         <%# <%= link_to "Home", root_path ,class: "nav-item nav-link" %>
         <%# <%= link_to "Help", help_path ,class: "nav-item nav-link" %> 
@@ -10,6 +10,7 @@
               </button>
               <div id="menu" class="collapse navbar-collapse ">
                 <ul class="navbar-nav navbar-nav-extend ml-auto">
+                  <li class="nav-item nav-item-extend"><%= link_to "投稿画面へ", root_path,class:"btn btn-outline-success" %></li>
                   <li class="nav-item nav-item-extend"><%= link_to "記録画面へ", user_path(current_user),class:"btn btn-outline-success" %></li>
                   <li class="nav-item nav-item-extend nav-link"><%= link_to "ユーザ 一覧", users_path %></li>
                   <li class="nav-item nav-item-extend nav-link"><%= link_to "Profile", current_user %></li>
