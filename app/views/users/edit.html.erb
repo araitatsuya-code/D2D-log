@@ -23,7 +23,8 @@
             <%= form.password_field :password_confirmation, class: 'form-control', placeholder: "パスワード（再入力）" %>
           </div>
           <div class="form-group">
-          プロフィール画像（任意）
+          <p class="mozi">プロフィール画像（任意）</p>
+          <span class="mozi">現在の画像：<span><img src="<%= @user.image %>" width="50" height="50" >
             <%= form.file_field :image, class: 'form-control', placeholder: "プロフィール画像（任意）" %>
           </div>
           <div class="form-group">
@@ -39,7 +40,7 @@
         <div class="card-body">
           <div class="form-group form-group-reset_time">
             <%= form.check_box :reset_time, class: 'form-check-input' %>
-            <%= form.label :reset_time, '記録時間をリセットする', class: 'form-check-label' %>
+            <%= form.label :reset_time, '記録時間をリセットする', class: 'form-check-label mozi' %>
           </div>
           <div class="form-group">
             <%= form.submit "変更", class: 'btn btn-info btn-lg form-submit' %>
