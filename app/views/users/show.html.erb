@@ -1,29 +1,33 @@
 <% provide(:title, @user.name) %>
+<div class="container">
 <div class="row">
   <aside class="col-md-6">
     <section class="user_info">
       <h1>
         <%= gravatar_for @user %>
-        <%= @user.name %>
+        <%= @user.name %>さんの記録
       </h1>
-      <%= line_chart @data.group_by_week(:created_at).sum(:time) %>
-      <%= line_chart @data.group_by_month(:created_at).sum(:time) %>
-      <%# <%= area_chart @data.group_by_day(:created_at).sum(:time), width: "200px", height: "200px" %> %>
-     
     </section>
     <section class="stats">
       <%= render 'shared/stats' %>
     </section>
   </aside>
   <div class="col-md-6">
+  <%= line_chart @data.group_by_week(:created_at).sum(:time) %>
+  <%= line_chart @data.group_by_month(:created_at).sum(:time) %>
+  </div>
+  <div class="col-md-12">
     <%= render 'follow_form' if logged_in? %>
     <% if @user.microposts.any? %>
-      <h3>Microposts (<%= @user.microposts.count %>)</h3>
+      <h3>投稿一覧 (<%= @user.microposts.count %>)</h3>
       <%= render 'users/search' %>
-      <ol class="microposts">
-        <%= render @microposts %>
-      </ol>
+  <div class="row">
+    <div class="col">
+      <%= render 'layouts/log' %>
+    </div>
+  </div>
       <%= will_paginate @microposts %>
     <% end %>
   </div>
+</div>
 </div>
