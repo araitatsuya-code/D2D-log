@@ -19,7 +19,9 @@ class UsersController < ApplicationController
     @microposts = @user.microposts.paginate(page: params[:page]).search(params[:search])
     # like拡張機能
     @likes = Like.where(micropost_id: params[:micropost_id])
-    @data = Micropost.where(user_id: params[:id])
+    @period = params[:period]
+    @chart = @user.microposts_period(@period)
+    # @data = Micropost.where(user_id: params[:id])
   end
   
 
