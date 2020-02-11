@@ -73,17 +73,14 @@ p {
 #logo {
   float: left;
   margin-right: 10px;
-  font-size: 1.7em;
-  color: white;
+  font-size: 1.6em;
+  color: black;
   text-transform: uppercase;
   letter-spacing: -1px;
-  padding-top: 9px;
   font-weight: bold;
-  &:hover {
-    color: white;
-    text-decoration: none;
-  }
+  text-decoration: none;
 }
+
 
 /* footer */
 
@@ -183,7 +180,6 @@ input {
   }
 }
 
-// 中略
 
 // logs
 ol {

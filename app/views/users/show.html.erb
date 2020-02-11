@@ -4,7 +4,7 @@
     <section class="user_info">
       <h1>
         <%= gravatar_for @user %>
-        <%= @user.name %>
+        <%= @user.name %>さんの記録
       </h1>
       <%= line_chart @data.group_by_week(:created_at).sum(:time) %>
       <%= line_chart @data.group_by_month(:created_at).sum(:time) %>
