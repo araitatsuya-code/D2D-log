@@ -21,9 +21,11 @@
     <% if @user.microposts.any? %>
       <h3>投稿一覧 (<%= @user.microposts.count %>)</h3>
       <%= render 'users/search' %>
-      <ol class="microposts">
-        <%= render @microposts %>
-      </ol>
+  <div class="row">
+    <div class="col">
+      <%= render 'layouts/log' %>
+    </div>
+  </div>
       <%= will_paginate @microposts %>
     <% end %>
   </div>
