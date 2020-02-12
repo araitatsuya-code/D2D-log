@@ -106,4 +106,6 @@ Rails.application.configure do
     :domain         => 'gmail.com',
     :enable_starttls_auto => true
   }
+
+  Rails.application.routes.default_url_options[:host] = host
 end
