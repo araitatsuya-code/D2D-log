@@ -49,6 +49,7 @@ test:
 #
 production:
   <<: *default
-  database: tutorial_app_production
-  username: tutorial_app
-  password: <%= ENV['TUTORIAL_APP_DATABASE_PASSWORD'] %>
+  database: d2d_app_production
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
