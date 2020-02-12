@@ -95,8 +95,7 @@ Rails.application.configure do
 
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
-  host = "13.115.204.157"
-  config.action_mailer.default_url_options = { host: host }
+  config.action_mailer.default_url_options = { host: Rails.application.credentials.host_server[:ip] }
   ActionMailer::Base.smtp_settings = {
     :address        => 'smtp.gmail.com',
     :port           => '587',
@@ -106,6 +105,4 @@ Rails.application.configure do
     :domain         => 'gmail.com',
     :enable_starttls_auto => true
   }
-
-  Rails.application.routes.default_url_options[:host] = host
 end
