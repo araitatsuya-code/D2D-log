@@ -487,6 +487,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   faker
   fog (= 1.42)
+  fog-aws
   groupdate
   guard (= 2.13.0)
   guard-minitest (= 2.4.4)
