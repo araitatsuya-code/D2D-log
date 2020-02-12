@@ -1,10 +1,4 @@
-<h1>Sample App</h1>
 
-<p>Hi <%= @user.name %>,</p>
-
-<p>
-Welcome to the Sample App! Click on the link below to activate your account:
-</p>
-
-<%= link_to "Activate", edit_account_activation_url(@user.activation_token,
-                                                    email: @user.email) %>
+<p><%= @user.name %>さんへ</p>
+<p>Lantern Lanternにいらして下さりありがとうございます。下記の『認証する』をクリックして認証を済ませてください。</p>
+<%= link_to "認証する", edit_account_activation_url(@user.activation_token, email: @user.email) %>
