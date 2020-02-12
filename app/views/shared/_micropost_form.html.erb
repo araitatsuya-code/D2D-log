@@ -6,10 +6,12 @@
   <div class="field">
     <%= f.text_area :content, placeholder: "  内容を入力してください" %>
   </div>
-  <%= f.submit "投稿する", class: "btn btn-primary" %>
   <span class="picture">
+  画像を添付してください（任意）
     <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
   </span>
+  <%= f.submit "投稿する", class: "btn btn-primary" %>
+
 <% end %>
 
 <script type="text/javascript">
