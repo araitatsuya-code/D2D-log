@@ -2,7 +2,7 @@ User.create!(name:  "テストさん",
   email: "test@test.com",
   password:              "111111",
   password_confirmation: "111111",
-  admin: true,
+  admin: false,
   activated: true,
   activated_at: Time.zone.now)
 
