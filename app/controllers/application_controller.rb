@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   include SessionsHelper
+  before_action :basic_auth
 
   private
 
@@ -12,4 +13,11 @@ class ApplicationController < ActionController::Base
         redirect_to login_url
       end
     end
+
+    def basic_auth
+      authenticate_or_request_with_http_basic do |username, password|
+        username == 'admin' && password == '000p'
+      end
+    end
+
 end
