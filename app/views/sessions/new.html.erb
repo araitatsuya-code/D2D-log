@@ -3,14 +3,15 @@
   <div class="row">
     <div class="col">
       <h1 class="form-title">ログイン</h1>
+      <p>テストユーザーでログインする方はそのままログインボタンを押してください<p>
       <%= form_with(scope: :session, url: login_path, local: true) do |form| %>
        
         <div class="form-group">
-          <%= form.email_field :email, class: 'form-control', placeholder: "メールアドレス" %>
+          <%= form.email_field :email, class: 'form-control', placeholder: "メールアドレス",value:"test@test.com" %>
         </div>
 
         <div class="form-group">
-          <%= form.password_field :password, class: 'form-control', placeholder: "パスワード" %>
+          <%= form.password_field :password, class: 'form-control', placeholder: "パスワード", value:"111111" %>
         <%= link_to "(パスワードをお忘れの場合)", new_password_reset_path %>
         </div>
 
