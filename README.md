@@ -24,6 +24,8 @@
 週別、月別、年別で切り替え可能<br>
 ・投稿表示検索機能<br>
 
+## その他機能
+SSLポート番号を２２から変更
 
 # サイトフローチャート
 <img width="300" alt="D2Dサイトフローチャート" src="https://user-images.githubusercontent.com/58362112/74591631-e6f12c80-505c-11ea-83ac-2a5de8bb8eac.png">
@@ -32,9 +34,9 @@
 <img width="400" alt="D2D ER図" src="https://user-images.githubusercontent.com/58362112/74590897-3718c080-5056-11ea-96a0-29f28c557066.png">
 
 # 開発環境
-Ruby 2.5.1
-Rails 5.2.4.1
-jquery
-MySQL
-AWS
+Ruby 2.5.1<br>
+Rails 5.2.4.1<br>
+jquery<br>
+MySQL<br>
+AWS（EC2,S3,route53）<br>
 
