@@ -1,4 +1,6 @@
 # D2D log 
+## リンク　http://www.araitcode.com/<br>
+
 <img width="300" alt="D2D ER図" src="https://user-images.githubusercontent.com/58362112/74590943-aee6eb00-5056-11ea-9830-d7408bea24a6.jpg">
 
 # 概要
