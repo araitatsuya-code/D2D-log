@@ -39,9 +39,9 @@
 * Chartkickのgemを使用して各期間ごとのデータをグラフ表示出来る様にした<br>
 
 ## インフラ
-* AWS（EC2）へのデプロイ、Route５３を使用したドメイン設定<br>
+* AWS（EC2）へのデプロイ、Route53を使用したドメイン設定<br>
 * S3を用いた画像データのクラウドストレージ保存<br>
-* SSLポート番号を２２番から変更<br>
+* SSLポート番号を22番から変更<br>
 
 # サイトフローチャート
 <img width="300" alt="D2Dサイトフローチャート" src="https://user-images.githubusercontent.com/58362112/74591631-e6f12c80-505c-11ea-83ac-2a5de8bb8eac.png">
