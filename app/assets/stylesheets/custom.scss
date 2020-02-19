@@ -159,8 +159,7 @@ aside {
   padding: 0;
 }
 
-///service2
-
+/* service2 */ 
 section.service2{
   text-align: center;
 }
@@ -206,6 +205,18 @@ section.service2{
   flex-basis: 223px;
   padding-top: 80px;
   margin-top: 24px;
+}
+/* github-grass */
+
+.github-grass {
+  font-size: 14px;
+  margin: 20 60px;
+}
+
+@media screen and (max-width: 768px){
+  .github-grass {
+    display: none;
+  }
 }
 
 

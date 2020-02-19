@@ -23,6 +23,9 @@
             <%= form.password_field :password_confirmation, class: 'form-control', placeholder: "パスワード（再入力）" %>
           </div>
           <div class="form-group">
+            <%= form.text_field :githuburl, class: 'form-control', placeholder: "githubのユーザー名を入力してください" %>
+          </div>
+          <div class="form-group">
           <p class="mozi">プロフィール画像（任意）</p>
           <span class="mozi">現在の画像：<span><img src="<%= @user.image %>" width="50" height="50" >
             <%= form.file_field :image, class: 'form-control', placeholder: "プロフィール画像（任意）" %>
