@@ -25,12 +25,14 @@
 ・いいねボタン<br>
 
 ## 個人ページ
-<img width="300" alt="D2Dguraph画面" src="https://user-images.githubusercontent.com/58362112/74590982-1866f980-5057-11ea-81d1-5bd9e02fc700.png">
+<img width="300" alt="D2D_github_grass" src="https://user-images.githubusercontent.com/58362112/74817889-029c5180-5341-11ea-83a1-c502234a0345.png">
 
 ・合計時間表示機能<br>
 総合計時間の文字表示<br>
 ・グラフ表示機能<br>
 週別、月別、年別で切り替え可能<br>
+![グラフ画面](https://user-images.githubusercontent.com/58362112/74817942-1e075c80-5341-11ea-98bf-0c7ad1167dcc.gif)
+・githubの草(activities)を表示（スマホ画面では非表示）<br>
 ・投稿表示検索機能<br>
 
 # 工夫した点
