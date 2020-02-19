@@ -11,13 +11,24 @@
     <section class="stats">
       <%= render 'shared/stats' %>
     </section>
-
   </aside>
+
   <div class="col-md-6">
   <%= render 'layouts/figure' %> 
   </div>
   <div class="col-md-12">
     <%= render 'follow_form' if logged_in? %>
+    <% if @user.githuburl %>
+      <div class="github-link">
+        <i class="fab fa-github-square"></i>
+        <a href="https://github.com/<%= @user.githuburl %>" target="_blank"><%= @user.name %></a>
+      </div>
+      <div class="github-grass">
+        <a href="https://github.com/<%= @user.githuburl %>" target="_blank">
+          <img src="https://grass-graph.moshimo.works/images/<%= @user.githuburl %>.png?">
+        </a>
+      </div>
+    <% end %>
     <% if @user.microposts.any? %>
     <br>
       <h3>投稿一覧 (<%= @user.microposts.count %>)</h3>
