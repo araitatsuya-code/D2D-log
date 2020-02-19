@@ -208,15 +208,17 @@ section.service2{
 }
 /* github-grass */
 
+@media screen and (min-width: 769px){
 .github-grass {
   font-size: 14px;
   margin: 20 60px;
 }
+}
 
 @media screen and (max-width: 768px){
-  .github-grass {
-    display: none;
-  }
+.github-grass {
+  display: none;
+}
 }
 
 
