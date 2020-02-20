@@ -16,7 +16,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @microposts = @user.microposts.paginate(page: params[:page]).search(params[:search])
+    @microposts = @user.microposts.paginate(page: params[:page],per_page: 10).search(params[:search])
     # like拡張機能
     @likes = Like.where(micropost_id: params[:micropost_id])
     @period = params[:period]
