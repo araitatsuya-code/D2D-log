@@ -21,6 +21,7 @@
 <img width="300" alt="D2D投稿画面" src="https://user-images.githubusercontent.com/58362112/74590970-eeadd280-5056-11ea-85af-d5e220c3aa74.png">
 
 ・投稿機能<br>
+・投稿のタグ付け機能、タグで絞り込み機能（acts-as-taggable-on使用）<br>
 ・投稿表示検索機能（本人、フォローしているユーザーの投稿）<br>
 ・いいねボタン<br>
 
