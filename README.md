@@ -53,7 +53,7 @@
 <img width="300" alt="D2Dサイトフローチャート" src="https://user-images.githubusercontent.com/58362112/74591631-e6f12c80-505c-11ea-83ac-2a5de8bb8eac.png">
 
 # ER図
-<img width="400" alt="D2D ER図" src="https://user-images.githubusercontent.com/58362112/74590897-3718c080-5056-11ea-96a0-29f28c557066.png">
+<img width="400" alt="d2dER3" src="https://user-images.githubusercontent.com/58362112/75093943-c7608380-55c9-11ea-9c19-c2a4bc38bebd.png">
 
 # 開発環境
 Ruby 2.5.1<br>
