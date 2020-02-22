@@ -6,6 +6,10 @@
   <div class="field">
     <%= f.text_area :content, placeholder: "  内容を入力してください" %>
   </div>
+    <div class="field">
+    <p>タグを,（カンマ）で区切って入力
+    <%= f.text_field :tag_list, value: @micropost.tag_list.join(',') %>
+  </div>
   <span class="picture">
   画像を添付（任意）
     <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
