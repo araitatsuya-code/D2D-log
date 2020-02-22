@@ -4,7 +4,7 @@ class MicropostsController < ApplicationController
 
 
   def index
-    @microposts = Micropost.tagged_with("#{params[:tag_name]}")
+    @microposts = Micropost.tagged_with("#{params[:tag_name]}").paginate(page: params[:page], per_page: 10)
   end
   def create
     @micropost = current_user.microposts.build(micropost_params)
