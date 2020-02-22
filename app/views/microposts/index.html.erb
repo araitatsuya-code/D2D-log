@@ -1,5 +1,4 @@
-<h1 class="log-title col-2">Logs</h1>
-<% if @user.microposts.any? %>
+<h2 class="log-title col-6">タグで絞り込み</h1>
   <div class="container">
     <ol class="microposts">
     <% @microposts.each do |micropost| %>
@@ -13,8 +12,9 @@
                 <div class="row">
                   <span class="log-time col-3"><%= micropost.time %>分</span>
                   <span class="col-7 log-timestamp log-timestamp-inline"><%= time_ago_in_words(micropost.created_at) %>前</span>
+                  <% if current_user?(micropost.user) %>
                   <span class="log-edit col-2"><%= link_to image_tag('edit_02.png', class: "log-edit-image"), edit_micropost_path(micropost.id) %></span>
-                  <%# <%= link_to "編集", edit_micropost_path(micropost.id) %>
+                  <% end %>
                 </div>
               </div>
               <span class="log-memo"><%= micropost.content %></span>
@@ -29,8 +29,6 @@
           </span>
         </li>
     <% end %>
+    <%= will_paginate @microposts %>
     </ol>
   </div>
-<% else %>
-  <span>まだ投稿がありません</span>
-<% end %>

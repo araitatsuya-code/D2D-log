@@ -6,6 +6,13 @@
   <span class="timestamp">
   投稿：<%= time_ago_in_words(micropost.created_at) %>前.
     <br>作業時間　<%= micropost.time %>分
+    <span>タグ：</span>
+    <% micropost.tag_list.each do |tag| %>
+    <span class="badge badge-primary mr-1 p-2">
+    <%= link_to tag, microposts_path(tag_name: tag), class: "text-white" %>
+    </span>
+    <% end %>
+    <br>
     <% if current_user?(micropost.user) %>
       <%= link_to "削除", micropost, method: :delete,
                                        data: { confirm: "You sure?" } %>

@@ -2,10 +2,11 @@ Rails.application.routes.draw do
   get 'password_resets/new'
   get 'password_resets/edit'
   get 'sessions/new'
+  get 'tags/:tag', to: 'micropost#index', as: :tag
   root 'static_pages#home'
-  get  '/help',    to: 'static_pages#help'
-  get  '/about',   to: 'static_pages#about'
-  get  '/contact', to: 'static_pages#contact'
+  # get  '/help',    to: 'static_pages#help'
+  # get  '/about',   to: 'static_pages#about'
+  # get  '/contact', to: 'static_pages#contact'
   get  '/signup',  to: 'users#new'
   post '/signup',  to: 'users#create'
   get    '/login',   to: 'sessions#new'
@@ -20,7 +21,7 @@ Rails.application.routes.draw do
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]
   resources :relationships,       only: [:create, :destroy]
-  resources :microposts, only: [:create, :edit, :update, :destroy, :edit, :update]
+  resources :microposts
   resources :microposts do
     resources :likes, only: [:create, :destroy]
   end
