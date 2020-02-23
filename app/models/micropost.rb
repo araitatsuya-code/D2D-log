@@ -1,5 +1,6 @@
 class Micropost < ApplicationRecord
   acts_as_taggable
+  acts_as_taggable_on :labels
   belongs_to :user
   has_many :likes, dependent: :destroy
   default_scope -> { order(created_at: :desc) }
