@@ -34,3 +34,4 @@ DS.store
 /public/uploads
 erd.pdf
 erd.png
+.DS_Store

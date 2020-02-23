@@ -5,7 +5,9 @@ class MicropostsController < ApplicationController
 
   def index
     @microposts = Micropost.tagged_with("#{params[:tag_name]}").paginate(page: params[:page], per_page: 10)
+    @chart = Micropost.tagged_with("#{params[:tag_name]}").group(:created_at).sum(:time)
   end
+
   def create
     @micropost = current_user.microposts.build(micropost_params)
     if @micropost.save

@@ -187,7 +187,7 @@ input {
   }
 }
 
-// max-width = 767px
+/* max-width = 767px */
 @media (max-width: 767px) {
   .nav-item-extend {
     margin-top: 0.6rem;
@@ -209,7 +209,7 @@ input {
 }
 
 
-// logs
+/* logs */
 ol {
   padding: 0;
   list-style: none;
@@ -268,7 +268,7 @@ ol {
   }
 }
 
-// paginate
+/* paginate */
 .pagination {
   margin-top: 1.6rem;
 
@@ -285,4 +285,8 @@ ol {
     border-color: $lantern-blue;
     color: $lantern-light-white;
   }
+}
+/*   tag   */
+.ptag{
+  margin-bottom: 30px;
 }

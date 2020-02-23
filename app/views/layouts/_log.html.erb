@@ -21,8 +21,10 @@
               <span class="log-picture"><%= image_tag micropost.picture.url if micropost.picture? %></span>
               <br>
               <span>タグ：</span>
-                <% micropost.tag_list.each do |tag| %>
-                <span class="badge badge-primary mr-1 p-2"><%= tag %></span>
+              <% micropost.tag_list.each do |tag| %>
+              <span class="badge badge-primary mr-1 p-2">
+              <%= link_to tag, microposts_path(tag_name: tag), class: "text-white" %>
+              </span>
                 <% end %>
                 <br>
               </span>
