@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'tasks/index'
+  get 'tasks/show'
+  get 'tasks/new'
+  get 'tasks/edit'
   get 'password_resets/new'
   get 'password_resets/edit'
   get 'sessions/new'
