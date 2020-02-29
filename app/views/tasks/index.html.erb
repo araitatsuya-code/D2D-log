@@ -1,19 +1,19 @@
 <h1>Tasks#index</h1>
 <p>Find me in app/views/tasks/index.html.erb</p>
-<table>
+<table class="table table-dark">>
   <tr>
-    <th>Id</th><th>Title</th><th>status</th><th></th><th></th><th></th>
+    <th>番号</th><th>やりたいこと</th><th>状態</th><th>目標終了日</th><th>実終了日</th><th></th>
   </tr>
   <% @tasks.each do |task| %>
   <tr>
     <td><%= task.id %></td>
     <td><%= task.content %></td>
     <td><%= task.status %></td>
-    <td><%= task.target_at %></td>
-    <td><%= task.completed_at %></td>
+    <td><%= task.target_at.strftime("%Y.%m.%d") %></td>
+    <td><%= task.completed_at.strftime("%Y.%m.%d") %></td>
     <td><%= link_to 'Show', task_path(task) %></td>
     <td><%= link_to 'Edit', edit_task_path(task) %></td>
-    <td><%= link_to 'Delete', task_path(task), method: :delete %></td>
+    <td><%= link_to 'Delete', task_path(task), method: :delete, data: { confirm: "本当に削除しますか？" } %></td>
   </tr>
   <% end %>
 </table>
