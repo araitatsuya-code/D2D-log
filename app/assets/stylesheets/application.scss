@@ -8,14 +8,14 @@
 $gray-medium-light: #eaeaea;
 $gray-light: #777;
 $state-danger-text: #eaaa;
-$lantern-light-white: #f5f5f6;
-$lantern-dark-white: #cdced1;
-$lantern-black: #050c17;
-$lantern-red: #b1046b;
-$lantern-violet: #640c41;
-$lantern-yellow: #bdb319;
-$lantern-blue: #0071bc;
-$lantern-dark-blue: #0c2e64;
+$d2-light-white: #f5f5f6;
+$d2-dark-white: #cdced1;
+$d2-black: #050c17;
+$d2-red: #b1046b;
+$d2-violet: #640c41;
+$d2-yellow: #bdb319;
+$d2-blue: #0071bc;
+$d2-dark-blue: #0c2e64;
 
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
@@ -198,7 +198,7 @@ input {
   }
 
   .log-list {
-    border-left: 1px solid $lantern-dark-white;
+    border-left: 1px solid $d2-dark-white;
   }
 }
 
@@ -231,7 +231,7 @@ ol {
     text-align: center;
     padding-bottom: 2rem;
     margin-top: 0.1rem;
-    border-right: 1px solid $lantern-dark-white;
+    border-right: 1px solid $d2-dark-white;
   }
 
   .col-log-memos {
@@ -240,7 +240,7 @@ ol {
     .log-time-and-edit {
       .log-time {
         font-size: 1.2rem;
-        color: $lantern-yellow;
+        color: $d2-yellow;
       }
 
       .log-timestamp-inline {
@@ -274,16 +274,16 @@ ol {
 
   .page-item {
     .page-link {
-      border: 1px solid $lantern-light-white;
-      background-color: $lantern-light-white;
-      color: $lantern-blue;
+      border: 1px solid $d2-light-white;
+      background-color: $d2-light-white;
+      color: $d2-blue;
     }
   }
 
   .page-item.active .page-link {
-    background-color: $lantern-blue;
-    border-color: $lantern-blue;
-    color: $lantern-light-white;
+    background-color: $d2-blue;
+    border-color: $d2-blue;
+    color: $d2-light-white;
   }
 }
 /*   tag   */
