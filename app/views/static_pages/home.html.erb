@@ -35,7 +35,8 @@
     <p class="huwari">１年分、１ヶ月分、１週間分など</p>
     <p class="huwari">期間ごとに時間を計測することができます</p>
   </div>
-  <%= link_to "始める", signup_path, class: "btn-box" %>
+  <%= link_to "新規登録", signup_path, class: "btn-box" %>
+  <%= link_to "ログイン", login_path , class: "btn-box"%>
 </div>
 <section class="service2 container">
   <h2>D2Dだから続けられる<br>日々の積み上げ</h2>
@@ -63,16 +64,11 @@
 
 <script>
     $(function(){
-    $(window).scroll(function (){
+    $(window).on("load", function (){ //ページ読み込み時に表示
         $('.huwari').each(function(){
-            var targetElement = $(this).offset().top;
-            var scroll = $(window).scrollTop();
-            var windowHeight = $(window).height();
-            if (scroll > targetElement - windowHeight + 0){
                 $(this).css('opacity','1');
                 $(this).css('transform','translateY(0)');
-            }
-        });
+            });
     });
 });
 </script>
