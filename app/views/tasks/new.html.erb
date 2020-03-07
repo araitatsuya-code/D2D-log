@@ -1,31 +1,33 @@
-<h1>Tasks#new</h1>
 <% provide(:title, '新規todo作成') %>
-<div class="container signup-container">
-  <div class="row">
-    <div class="col">
-      <div class="signup-logo-img">
-      </div>
-      <h1 class="signup-title">新規todo作成</h1>
-      <%= form_with(model: @task,local: true) do |form| %>
-      <%= render 'shared/error_messages', object: form.object %>
+  <div class="edit-title container ">
+    <h1 class="form-title form-title-edit">todo作成</h1>
+  </div>
+  <%= form_with(model: @task, local: true) do |form| %>
+  <div class="container ">
+    <div class="col-md-12">
+      <section class="card">
+        <h2 class="card-header form-title">todo作成</h2>
+        <div class="card-body">
+          <%= render 'shared/error_messages', object: form.object %>
         <div class="form-group">
-          <%= form.select :status,Task.statuses.keys.to_a,class: 'form-control',  include_blank: true %>
+          <p class="formword">状態</p>
+          <%= form.select :status,Task.statuses.keys.to_a, class: 'form-control' %>
         </div>
         <div class="form-group">
+          <p class="formword">タスク内容</p>
           <%= form.text_field :content, class: 'form-control', placeholder: "内容" %>
         </div>
         <div class="form-group">
-          <%= form.date_field	 :target_at, class: 'form-control', placeholder: "目標終了日" %>
+          <p class="formword">目標終了日</p>
+          <%= form.date_field	 :target_at, class: 'form-control', placeholder: "パスワード" %>
         </div>
         <div class="form-group">
-          <%= form.date_field	 :completed_at, class: 'form-control', placeholder: "開始日〜実終了日", value: Time.now.strftime("%Y-%m-%d") %>
+          <p class="formword">開始日</p>
+          <%= form.date_field	 :completed_at, class: 'form-control', placeholder: "パスワード（再入力）" %>
         </div>
         <div class="form-group">
-          <%= form.submit "新規todo作成", class: "btn btn-info btn-lg form-submit" %>
+          <%= form.submit "todo作成", class: "btn btn-info btn-lg form-submit" %>
         </div>
-        <% end %>
-
-        <p><%= link_to '一覧に戻る', tasks_url %></p>
+    <% end %>
+    <p><%= link_to '一覧に戻る', tasks_url %></p>
     </div>
-  </div>
-</div>
