@@ -19,4 +19,6 @@
 //= require bootstrap-sprockets
 //= require chartkick
 //= require Chart.bundle
+//= require jquery-ui/widgets/sortable
+//= require jquery-ui/effects/effect-highlight
 //= require_tree .

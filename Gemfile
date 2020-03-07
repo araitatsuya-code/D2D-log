@@ -7,6 +7,7 @@ gem 'rails-i18n', '~> 5.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.1'
+gem 'jquery-ui-rails'
 gem 'bcrypt',         '3.1.12'
 gem 'faker'
 gem 'gimei'
