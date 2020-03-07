@@ -1,4 +1,6 @@
 class Task < ApplicationRecord
+  include RankedModel 
+  ranks :row_order , with_same: :user_id 
   belongs_to :user, optional: true
   enum status: {
     "未実施": "0",

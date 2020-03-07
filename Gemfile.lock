@@ -399,6 +399,8 @@ GEM
       thor (>= 0.19.0, < 2.0)
     raindrops (0.19.1)
     rake (13.0.1)
+    ranked-model (0.4.5)
+      activerecord (>= 4.2)
     rb-fsevent (0.10.3)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
@@ -522,6 +524,7 @@ DEPENDENCIES
   rails-controller-testing
   rails-erd
   rails-i18n (~> 5.1)
+  ranked-model
   sass-rails (~> 5.0)
   selenium-webdriver
   spring
