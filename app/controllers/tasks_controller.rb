@@ -15,7 +15,7 @@ class TasksController < ApplicationController
   def create
     @task = current_user.tasks.new task_params
     @task.save!
-    redirect_to @task
+    redirect_to tasks_url
   end
 
   def edit
@@ -25,7 +25,7 @@ class TasksController < ApplicationController
   def update
     @task = target_task params[:id]
     @task.update(task_params)
-    redirect_to @task
+    redirect_to tasks_url
   end
 
   def destroy
@@ -34,12 +34,18 @@ class TasksController < ApplicationController
     redirect_to tasks_url
   end
 
+  def sort
+    task = Task.find(params[:task_id])
+    task.update(task_params)
+    render body: nil 
+  end
+
   private
     def target_task task_id
       current_user.tasks.where(id: task_id).take
     end
 
     def task_params
-      params.require(:task).permit(:content, :status, :target_at, :completed_at)
+      params.require(:task).permit(:content, :status, :target_at, :completed_at, :row_order_position)
     end
   end
