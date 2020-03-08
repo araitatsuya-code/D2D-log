@@ -7,12 +7,12 @@
   <tbody id="task_list">
   <% @tasks.each do |task| %>
   <tr data: { model_name: task.class.name.underscore, update_url: task_sort_path(task)}>
-    <td><%= task.content %></td>
+    <td class="text-wrap"><%= task.content %></td>
     <td><%= task.status %></td>
     <td><%= task.target_at.strftime("%Y.%m.%d") %></td>
     <td><%= task.completed_at.strftime("%Y.%m.%d") %></td>
     <td><%= link_to image_tag('edit_02.png', size: '24x24',class: "log-edit-image "), edit_task_path(task) %></td>
-    <td><%= link_to 'Delete', task_path(task), method: :delete, data: { confirm: "本当に削除しますか？" } %></td>
+    <td><%= link_to image_tag('delete.png', size: '24x24',class: "log-edit-image "), task_path(task), method: :delete, data: { confirm: "本当に削除しますか？" } %></td>
   </tr>
   <% end %>
   </tbody>
