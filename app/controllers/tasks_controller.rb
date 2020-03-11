@@ -1,11 +1,12 @@
 class TasksController < ApplicationController
+  before_action :set_tasks, only: [:show, :edit, :update, :destroy, ]
+
   def index
     # @tasks = current_user.tasks
     @tasks = current_user.tasks.rank(:row_order)
   end
 
   def show
-    @task = target_task params[:id]
   end
 
   def new
@@ -19,17 +20,14 @@ class TasksController < ApplicationController
   end
 
   def edit
-    @task = target_task params[:id]
   end
 
   def update
-    @task = target_task params[:id]
     @task.update(task_params)
     redirect_to tasks_url
   end
 
   def destroy
-    @task = target_task params[:id]
     @task.destroy
     redirect_to tasks_url
   end
@@ -48,4 +46,9 @@ class TasksController < ApplicationController
     def task_params
       params.require(:task).permit(:content, :status, :target_at, :completed_at, :row_order_position)
     end
+
+    def set_tasks
+      @task = target_task params[:id]
+    end
+  
   end
