@@ -54,7 +54,7 @@
 * sshdのLISTENポート番号を22番から変更<br>
 
 # サイトフローチャート
-<img width="300" alt="D2Dサイトフローチャート" src="https://user-images.githubusercontent.com/58362112/74591631-e6f12c80-505c-11ea-83ac-2a5de8bb8eac.png">
+<img width="400" alt="D2Dサイトフローチャート" src="https://user-images.githubusercontent.com/58362112/76683154-2ce1e600-6645-11ea-9924-a32163ca9daa.png">
 
 # ER図
 <img width="400" alt="d2derd" src="https://user-images.githubusercontent.com/58362112/76683132-f906c080-6644-11ea-926d-14bff5093030.png">
