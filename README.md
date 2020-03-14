@@ -45,6 +45,7 @@
 * Chartkickのgemを使用して各期間ごとのデータをグラフ表示出来る様にした<br>
 * acts-as-taggable-onを使用したタグの絞り込みと絞り込みを利用したグラフ機能<br>
 * データベース文字コード変更による絵文字投稿機能
+<img width="300" alt="emozi" src="https://user-images.githubusercontent.com/58362112/76682966-b4c6f080-6643-11ea-99fa-2ecfc8767d14.png">
 
 ## インフラ
 * AWS（EC2）へのデプロイ、Route53を使用したドメイン設定<br>
