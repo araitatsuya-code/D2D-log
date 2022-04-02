@@ -13,7 +13,7 @@ gem 'faker'
 gem 'gimei'
 gem 'will_paginate',           '3.1.7'
 gem 'will_paginate-bootstrap4'
-gem 'carrierwave',             '1.2.2'
+gem 'carrierwave',             '1.3.2'
 gem 'mini_magick',             '4.9.4'
 # Use mysql as the database for Active Record
 gem 'mysql2', '>= 0.4.4', '< 0.6.0'
